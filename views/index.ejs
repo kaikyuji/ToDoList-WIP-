@@ -8,24 +8,31 @@
     <link rel="stylesheet" href="public/style.css">
 </head>
 <body>
-    <h3><%=Date %> at GMT<%=GMT%></h3>
-    <h1>myToDoList</h1>
+    <h3><%=Date %> at <%=GMT%></h3>
+    <h1><%=myToDoList%></h1>
     <div class="container">
         <ul>
             <%for(let x of newItemEJS){%>
-                <%if (x.trim().length >= 1){%>
-                    <li><%=x%></li>
-                    <%} %>
-                    <%}%>
+                <li><%=x%></li>
+            <%}%>
         </ul>
     </div>
     <form class="additems" action="/" method="post">
-            <input type="text" name="newItemJS"> <button onclick="submit()">Add</button>
-            <script src=""></script>
+        <input type="text" name="newItemInput"> <button name='listName' value=<%=listType%>>Add</button>
     </form>
 
     <form action="/clear" method="post">
         <button class="clearbutton">Clear All</button>
     </form>
+
+    <div class="redirection">
+        <div class='title'>
+            <h5>Sections</h5>
+        </div>
+        <div class="sections">
+            <a class="work" href="/work"><button>Work</button></a>
+            <a class="everyday"e href="/"><button>Everyday</button></a>
+        </div>
+    </div>
 </body>
 </html>
