@@ -19,8 +19,13 @@
                     <%}%>
         </ul>
     </div>
-        <form action="/" method="post">
-            <input type="text" name="newItemJS"> <button onclick="submit()">+</button>
-        </form>
+    <form class="additems" action="/" method="post">
+            <input type="text" name="newItemJS"> <button onclick="submit()">Add</button>
+            <script src=""></script>
+    </form>
+
+    <form action="/clear" method="post">
+        <button class="clearbutton">Clear All</button>
+    </form>
 </body>
 </html>

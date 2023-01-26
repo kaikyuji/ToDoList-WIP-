@@ -42,4 +42,8 @@ app.post('/', function(req, res){
     // determinada ação com esses
 })
 
+app.post('/clear', function(req, res){
+    itemsTDL = []
+    res.redirect('/')
+})
 

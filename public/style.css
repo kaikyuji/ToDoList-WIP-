@@ -44,9 +44,10 @@ h1{
     justify-content: space-around;
     border-bottom: .5px solid black;
     height: 50px;
+    overflow: hidden;
 }
 
-form{
+.additems{
     position: relative;
     width: 100%;
     max-width: 375px;
@@ -54,23 +55,32 @@ form{
     height: 50px;
     display: flex;
 }
-form input{
+
+.additems input{
     width: 80%;
     height: 50px;
     border: none;
     text-align: center;
     outline: none;
     font-size: 1rem;
+    border-bottom: .5px solid black;
 }
 
-form button{
+.additems button{
     border: none;
     width: 20%;
     height: 50px;
     background: #D40057;
     transition: .5s;
+    border-bottom: .5px solid black;
 }
 
-form button:hover{
+.additems button:hover{
     background: #860239;
+}
+
+.clearbutton{
+    margin-top: 10vh;
+    width: 300px;
+    padding: 20px;
 }
